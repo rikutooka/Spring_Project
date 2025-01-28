@@ -25,7 +25,7 @@ public class MultiController {
 		this.multiService = multiService;
 	}
 @GetMapping("multi")
-public String multi(Model model) {
+public  String multi(Model model) {
 	int result = multiService.multiNum(5, 6);
 	//リクエストスコープに格納
 	model.addAttribute("result", result);

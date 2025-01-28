@@ -1,6 +1,10 @@
 package com.example.demo.fizzBuzz.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.fizzBuzz.service.FizzBuzzService;
 
@@ -22,6 +26,12 @@ public class FizzBuzzController {
 		this.fizzBuzzService = fizzBuzzService;
 	}
 	
-//	@GetMapping("FizzBuzz")
-//	public String FizzBuzz
+	@GetMapping("FizzBuzz")
+	public String FizzBuzz (Model model) {
+		List<String> fizzBuzzList = fizzBuzzService.fizzBuzzList();
+		//リクエストスコープに格納
+		model.addAttribute("result", fizzBuzzList);
+		return "fizzBuzz.html";
+		
+	}
 }

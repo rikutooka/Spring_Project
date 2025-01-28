@@ -1,3 +1,5 @@
 localhost:8080/hello
 
 localhost:8080/multi
+
+localhost:8080/FizzBuzz

@@ -3,3 +3,7 @@ localhost:8080/hello
 localhost:8080/multi
 
 localhost:8080/FizzBuzz
+
+localhost:8080/Minus
+
+localhost:8080/Calculator
